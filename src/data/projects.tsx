@@ -9,7 +9,7 @@ export const projects: Project[] = [
     description:
       'La página web aun está en desarrollo para la academia Deportiva "ks Sport". Este proyecto buscaba informar y atraer a nuevos alumnos.',
     bannerUrl: "/poster/web.svg",
-    stackTech: [<AstroIcon />, <TailwindCSSIcon />, <TypeScriptIcon />],
+    stackTech: [],
     ctas: [
       {
         link: "https://github.com/papaconhuevo68-lgtm/ks-sport-academia",
@@ -26,11 +26,11 @@ export const projects: Project[] = [
     description:
       "Actualmente me encuentro de voluntaria con desarroladora front-end en Global Shapers Santander del foro economico mundial. ",
     bannerUrl: "/poster/admin.svg",
-    stackTech: [<TypeScriptIcon />, <TailwindCSSIcon />],
+    stackTech: [],
     ctas: [
       {
         link: "https://globalshaperssantander.es/",
-        text: ":)",
+        text: "Global Shapers",
         variant: "default",
         icon: <ExternalLinkIcon />,
       },
