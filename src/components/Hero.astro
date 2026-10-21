@@ -1,38 +1,57 @@
 ---
-import { EnvelopeClosedIcon, FileTextIcon, CheckCircledIcon } from "@radix-ui/react-icons";
-import { Button } from "@atoms/button";
+import { EnvelopeClosedIcon, FileTextIcon, DownloadIcon } from "@radix-ui/react-icons";
 import "@fontsource-variable/space-grotesk";
 import LinkButton from "@astro/LinkButton.astro";
 ---
 
 <section class="grid h-[92vh] place-content-center place-items-center gap-4 text-center">
   <div class="relative flex w-full justify-center items-center">
-    <img
-      src="leo1.webp"
-      alt="Leonardo Palomino"
+    <video
+      src="/vannia1.mp4"
+      autoplay
+      loop
+      muted
+      playsinline
       class="size-44 md:size-56 rounded-full object-cover border-4 border-black transition duration-500 hover:scale-105"
-      loading="eager"
-    />
+      style="object-position: 78% 50%;"
+    ></video>
   </div>
   <div class="flex flex-col">
     <h1 class="text-4xl font-bold md:text-4xl group cursor-crosshair font-space">
-      Hola, me llamo <br />
+      Holii, me llamo <br />
       <span class="transition duration-300 ease-in-out group-hover:text-blue-600"
-        >Leonardo Palomino</span
+        >Vannia Angelica</span
       >
     </h1>
-    <p class="my-4 font-varela">Desarrollador de aplicaciones web y móvil. Lima, Peru.</p>
-    <section class="mx-auto flex flex-col gap-2 sm:flex-row">
-      <a
-        href="https://wa.me/51976783049"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+    <p class="my-4 font-varela">Desarrolladora de aplicaciones web. Santander, España.</p>
+    <section class="mx-auto flex flex-col gap-3 sm:flex-row items-center justify-center">
+      <LinkButton
+        link="/cv.pdf"
+        download="cv.pdf"
+        variant="primary"
+        text="Descargar mi CV"
+        position="left"
+        class="w-full sm:w-auto"
       >
-        <EnvelopeClosedIcon className="mr-2" /> Contactar
-      </a>
-      <LinkButton link="/CV_AITORPALOMINO.pdf" variant={"primary"} text="Ver CV" position="left">
+        <DownloadIcon />
+      </LinkButton>
+      <LinkButton
+        link="/cv.pdf"
+        variant="secondary"
+        text="Ver mi CV"
+        position="left"
+        class="w-full sm:w-auto"
+      >
         <FileTextIcon />
+      </LinkButton>
+      <LinkButton
+        link="https://wa.me/51927334920"
+        variant="outline"
+        text="Contactar"
+        position="left"
+        class="w-full sm:w-auto"
+      >
+        <EnvelopeClosedIcon />
       </LinkButton>
     </section>
   </div>
